@@ -1,0 +1,26 @@
+# Shared installed dependencies and machine-local setup outputs
+.venv/
+node_modules/
+.setup/
+__pycache__/
+*.pyc
+
+# Presentation sources, working files, and deliverables stay local
+projects/*
+!projects/.gitkeep
+
+# Local secrets, credentials, and machine-specific configuration
+.env
+.env.*
+.claude/
+.claude.json
+.claude.json.*
+CLAUDE.local.md
+.npmrc
+.pypirc
+.netrc
+*.bak-slide-workspace-*
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
