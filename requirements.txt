@@ -1,0 +1,8 @@
+# ワークスペース共通のPython環境。OSのPythonにはpip installしません。
+# setup.sh --update でこの範囲の新版へ更新します。
+markitdown[pptx,docx,pdf]>=0.1,<0.2
+Pillow>=10,<13
+defusedxml>=0.7,<1
+lxml>=5,<7
+python-pptx>=1,<2
+pypdf>=5,<7
