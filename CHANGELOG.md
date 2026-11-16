@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+Production-policy update. Setup, project creation, templates, and tests are unchanged.
+
+- Restructure `MAKE_SLIDES.md` into short core drafting rules, a draft–render–review loop with fresh subagents per viewpoint (stopped after two or three rounds), and a viewpoint-based review checklist.
+- Add rules learned from a conference talk: noun-phrase titles, conclusions that restate the problem, source lines kept in notes, notes format, collaborative editing after the first draft, and a guarded procedure for updating a hand-edited master.
+- Add presenter settings (measured speaking rate, hard-to-say words, Even G2 teleprompter files made on request) and make anticipated-Q&A slides opt-in.
+- Adopt from a colleague's HTML slide skill: approval-based image generation, a four-step check of page transitions, diagram misuse checks, role-based colors, use-dependent checks, and rules against generic-looking slides.
+- Update both READMEs to describe the review loop and the title default.
+
 ## 3.1.0 — 2026-10-17
 
 Publication-focused release. The setup and project-creation implementations, production prompts, project template, dependency ranges, and existing workspace tests are unchanged from 3.0.0.

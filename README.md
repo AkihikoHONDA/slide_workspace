@@ -84,7 +84,7 @@ To continue the most recent conversation for that directory:
 claude --continue
 ```
 
-Preserve revision files. After manual PowerPoint edits, tell Claude which PPTX is the current editing source so regenerating from older code does not discard your work. Copying project files to another machine does not automatically transfer Claude's conversation history.
+Preserve revision files. After manual PowerPoint edits, tell Claude which PPTX is the current editing source so regenerating from older code does not discard your work. Under the default policy, Claude edits after the first draft only when explicitly asked, and before updating the master file it compares it with its previous output and reports your manual edits. Copying project files to another machine does not automatically transfer Claude's conversation history.
 
 ## Workspace structure
 
@@ -120,7 +120,9 @@ The source distribution contains no presentation materials, credentials, install
 
 ### Presentation policy
 
-Edit [MAKE_SLIDES.md](MAKE_SLIDES.md) for shared preferences and each project's `talk-brief.md` for its audience, sources, and constraints. The default policy asks for a draft that is easier to trim than to rebuild, preserves supporting figures and transitions, and leaves layout choices to Claude. It permits 14–16 pt text when appropriate while prioritizing the readability of important information; it does not require one layout or one title form on every slide.
+Edit [MAKE_SLIDES.md](MAKE_SLIDES.md) for shared preferences and each project's `talk-brief.md` for its audience, sources, and constraints. The default policy asks for a draft that is easier to trim than to rebuild, preserves supporting figures and transitions, and leaves layout choices to Claude. Titles and headings default to noun phrases (体言止め in Japanese). Body text aims at about 18 pt, and 14–16 pt is permitted when appropriate while prioritizing the readability of important information; it does not require one layout on every slide.
+
+The policy separates a short set of core rules for drafting from a checklist used after drafting. After the draft is rendered, fresh subagents review it one viewpoint at a time—narrative flow, layout and figures, evidence and accuracy, generic-looking design, and fitness for use—and only the important findings are fixed. The loop stops after two or three rounds, and remaining findings are reported. Because it uses subagents, a production run consumes more tokens. Images are generated only after the needed assets and the overall layout have been shown and approved.
 
 The prompts and template intentionally remain one Japanese-language source of truth in this release. Editing the README does not change the production instructions. Ask an active conversation to reread any policy or brief you change.
 
